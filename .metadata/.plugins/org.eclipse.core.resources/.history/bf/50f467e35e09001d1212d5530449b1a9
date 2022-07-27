@@ -1,0 +1,23 @@
+package com.gabrielsousa.pizzaamore.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gabrielsousa.pizzaamore.domain.Pizza;
+import com.gabrielsousa.pizzaamore.repository.PizzaRepository;
+
+import javassist.tools.rmi.ObjectNotFoundException;
+
+@Service
+public class PizzaService {
+
+	@Autowired
+	private PizzaRepository pizzaRepository;
+	
+	public Pizza find(Integer id) {
+		Optional<Pizza> obj = pizzaRepository.findById(id);
+		return obj.orElseThrow(()-> new ObjectNotFoundException("Objeto não encontrado: " + id + Pizza.class.getName())));
+	}
+}

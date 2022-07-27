@@ -1,0 +1,6 @@
+package com.gabrielsousa.pizzaamore.domain;
+
+//@Entity
+public class Pizza {
+
+}

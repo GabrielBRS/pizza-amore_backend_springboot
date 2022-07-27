@@ -1,0 +1,5 @@
+package com.gabrielsousa.pizzaamore.controller;
+
+public class PizzaController {
+
+}

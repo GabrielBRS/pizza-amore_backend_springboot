@@ -1,0 +1,5 @@
+package com.gabrielsousa.pizzaamore.domain;
+
+public class Pizza {
+
+}

@@ -1,0 +1,5 @@
+package com.gabrielsousa.pizzaamore.config;
+
+public class SecurityConfig {
+
+}

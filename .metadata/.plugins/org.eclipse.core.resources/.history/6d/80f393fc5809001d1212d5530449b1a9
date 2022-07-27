@@ -1,0 +1,5 @@
+package com.gabrielsousa.pizzaamore.repository;
+
+public class PizzaRepository {
+
+}

@@ -1,0 +1,11 @@
+package com.gabrielsousa.pizzaamore.domain;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Requests {
+
+	public Requests() {
+		
+	}
+}

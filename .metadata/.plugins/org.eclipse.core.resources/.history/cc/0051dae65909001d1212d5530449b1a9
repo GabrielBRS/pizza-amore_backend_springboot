@@ -1,0 +1,13 @@
+package com.gabrielsousa.pizzaamore.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gabrielsousa.pizzaamore.repository.PizzaRepository;
+
+@Service
+public class PizzaService {
+
+	@Autowired
+	private PizzaRepository pizzaRepository;
+}

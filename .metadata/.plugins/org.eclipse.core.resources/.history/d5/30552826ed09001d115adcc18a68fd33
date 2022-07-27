@@ -1,0 +1,86 @@
+package com.gabrielsousa.pizzaamore.dto;
+
+import java.io.Serializable;
+
+import com.gabrielsousa.pizzaamore.domain.BestSellers;
+import com.gabrielsousa.pizzaamore.domain.Pizza;
+
+public class BestSellersDTO implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	private Integer id;
+	
+	private Integer bestSellers;
+	
+	private Integer sellers;
+	
+	private Double invoicing;
+	
+	private Double profit;
+	
+	private String pizzas;
+	
+	public BestSellersDTO() {
+		
+	}
+	
+	public BestSellersDTO(BestSellers obj) {
+		this.id = obj.getId();
+		this.bestSellers = obj.getBestSellers();
+		this.sellers = obj.getSellers();
+		this.invoicing = obj.getInvoicing();
+		this.profit = obj.getProfit();
+		this.pizzas = (String) obj.getPizzas().getNamePizza();
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getBestSellers() {
+		return bestSellers;
+	}
+
+	public void setBestSellers(Integer bestSellers) {
+		this.bestSellers = bestSellers;
+	}
+
+	public Integer getSellers() {
+		return sellers;
+	}
+
+	public void setSellers(Integer sellers) {
+		this.sellers = sellers;
+	}
+
+	public Double getInvoicing() {
+		return invoicing;
+	}
+
+	public void setInvoicing(Double invoicing) {
+		this.invoicing = invoicing;
+	}
+
+	public Double getProfit() {
+		return profit;
+	}
+
+	public void setProfit(Double profit) {
+		this.profit = profit;
+	}
+
+	public String getPizzas() {
+		return pizzas;
+	}
+
+	public void setPizzas(String pizzas) {
+		this.pizzas = pizzas;
+	}
+
+
+	
+}

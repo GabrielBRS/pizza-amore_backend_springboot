@@ -1,0 +1,13 @@
+package com.gabrielsousa.pizzaamore;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PizzaamoreApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PizzaamoreApplication.class, args);
+	}
+
+}

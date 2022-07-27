@@ -1,0 +1,18 @@
+package com.gabrielsousa.pizzaamore.dto;
+
+import java.io.Serializable;
+
+import com.gabrielsousa.pizzaamore.domain.BestSellers;
+
+public class BestSellersDTO implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	public BestSellersDTO() {
+		
+	}
+	
+	public BestSellersDTO(BestSellers obj) {
+		
+	}
+
+}
