@@ -23,4 +23,8 @@ public class PizzaService {
 	public List<Pizza> findAll(){
 		return pizzaRepository.findAll();
 	}
+	
+	public List<Pizza> findAllByPizzaType(Integer pizzaType){
+		return pizzaRepository.findByPizzaType(pizzaType);
+	}
 }

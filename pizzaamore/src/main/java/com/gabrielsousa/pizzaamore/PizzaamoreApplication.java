@@ -1,6 +1,7 @@
 package com.gabrielsousa.pizzaamore;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,8 @@ public class PizzaamoreApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
+		//Pizzas Especiais
+		
 		List<String> ing1 = new ArrayList<>();
 		ing1.add("Banana");
 		ing1.add("Nutela");
@@ -50,6 +53,8 @@ public class PizzaamoreApplication implements CommandLineRunner {
 		ing3.add("Pimentão");
 		ing3.add("Queijo");
 		
+		//Pizzas Salgadas
+		
 		Pizza p3 = new Pizza(null, "Pizza de Portuguesa", 2, 35.00, 30.00, ing3);
 		
 		List<String> ing4 = new ArrayList<>();
@@ -62,6 +67,8 @@ public class PizzaamoreApplication implements CommandLineRunner {
 		ing5.add("Chocolate");
 		ing5.add("Queijo");
 		
+		//Pizzas Doces
+		
 		Pizza p5 = new Pizza(null, "Pizza de Chocolate", 3, 45.00, 40.00, ing5);
 		
 		List<String> ing6 = new ArrayList<>();
@@ -72,13 +79,7 @@ public class PizzaamoreApplication implements CommandLineRunner {
 		Pizza p6 = new Pizza(null, "Pizza de Banana", 3, 45.00, 40.00, ing6);
 		
 		
-		pizzaRepository.save(p1);
-		pizzaRepository.save(p2);
-		pizzaRepository.save(p3);
-		pizzaRepository.save(p4);
-		pizzaRepository.save(p5);
-		pizzaRepository.save(p6);
-		
+		pizzaRepository.saveAll(Arrays.asList(p1,p2,p3,p4,p5,p6));
 		
 		BestSellers bs1 = new BestSellers(null, 1, 3000, 5000.00, 1000.00,p2);
 		BestSellers bs2 = new BestSellers(null, 2, 2000, 3500.00, 800.00,p4);
